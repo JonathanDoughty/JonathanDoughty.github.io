@@ -17,7 +17,6 @@
     <script src="lib/leaflet.markercluster.js"></script>
     <link rel="stylesheet" href="lib/easy-button.css" />
     <script src="lib/easy-button.js"></script>
-    <script src='lib/leaflet-omnivore.min.js'></script>
   </head>
   <body>
     <div class="container">
@@ -28,13 +27,18 @@
         <p>The Best of the Canadian Maritimes - Jun 23 - Jul 4, 2025</p>
       </div>
       <div class="map-container">
+        <p>Markers with numbers denote multiple stops recorded at nearby
+          locations. Zoom in to see additional details. Blue balloons indicate
+          individual stops. Click on those to see location info.
+          The about dialog (?) has for additional information.</p>
         <div class="map-frame">
           <div id="map-id"></div>
         </div>
       </div>
     </div>
-    <script src="lib/trip_map.js" type="text/javascript"></script>
-    <div id="data_source" data-kml='["data/Maritimes2025.kml"]'></div>
-    <p id="trip_export" hidden>data/Maritimes2025.kml</p>
+    <script src="data/Maritimes2025.js" type="text/javascript"></script>
+    <script src="lib/trip.js" type="text/javascript"></script>
+    <!-- <div id="data_source" data-kml='["data/Maritimes2025.kml"]'></div> -->
+    <!-- <p id="trip_export" hidden>data/Maritimes2025.kml</p> -->
   </body>
 </html>
