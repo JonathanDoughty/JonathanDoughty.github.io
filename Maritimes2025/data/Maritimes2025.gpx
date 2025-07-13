@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="Organic Maps" xmlns="http://www.topografix.com/GPX/1/1"
+    xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3"
+    xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 https://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/gpx_style/0/2 https://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 https://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd">
+<metadata>
+  <name>Maritimes 2025</name>
+</metadata>
+<wpt lat="44.887589" lon="-63.515023">
+  <name>Halifax Stanfield International</name>
+</wpt>
+<wpt lat="44.640323" lon="-63.568327">
+  <name>Westin Nova Scotian</name>
+</wpt>
+<wpt lat="44.642585" lon="-63.582013">
+  <name>Halifax Public Gardens</name>
+</wpt>
+<wpt lat="44.659467" lon="-63.622922">
+  <name>Titanic Grave Site</name>
+</wpt>
+<wpt lat="44.645816" lon="-63.569922">
+  <name>Waterfront Warehouse</name>
+</wpt>
+<wpt lat="44.647613" lon="-63.57098">
+  <name>Maritime Museum of the Atlantic</name>
+</wpt>
+<wpt lat="44.649127" lon="-63.571113">
+  <name>Cable Wharf</name>
+  <desc>Cows Ice Cream</desc>
+</wpt>
+<wpt lat="44.648467" lon="-63.572913">
+  <name>Art Gallery of Nova Scotia</name>
+</wpt>
+<wpt lat="44.649845" lon="-63.571431">
+  <name>Metro Transit Ferry Terminal</name>
+</wpt>
+<wpt lat="44.663873" lon="-63.569852">
+  <name>Dartmouth Ferry Terminal Pier</name>
+</wpt>
+<wpt lat="44.664681" lon="-63.568557">
+  <name>Celtic Corner Public House</name>
+</wpt>
+<wpt lat="44.648994" lon="-63.57129">
+  <name>Peace By Chocolate</name>
+</wpt>
+<wpt lat="44.643314" lon="-63.567653">
+  <name>Grand Dérangement (Acadians)</name>
+</wpt>
+<wpt lat="45.576655" lon="-62.725997">
+  <name>Tim Hortons</name>
+</wpt>
+<wpt lat="45.654982" lon="-61.438268">
+  <name>Cove Motel</name>
+</wpt>
+<wpt lat="46.103503" lon="-60.745278">
+  <name>Alexander Graham Bell National Historic Site</name>
+</wpt>
+<wpt lat="46.098194" lon="-60.756824">
+  <name>Gisele‘s Inn</name>
+</wpt>
+<wpt lat="46.099981" lon="-60.754171">
+  <name>Baddeck Gathering Ceilidh</name>
+</wpt>
+<wpt lat="46.62468" lon="-61.01567">
+  <name>St Peters Catholic Church</name>
+</wpt>
+<wpt lat="46.642849" lon="-61.001165">
+  <name><![CDATA[DR. Elizabeth Lefort Gallery & Museum: Les Trois Pignons]]></name>
+</wpt>
+<wpt lat="46.738013" lon="-60.919486">
+  <name>Veteran's Monument</name>
+</wpt>
+<wpt lat="46.743134" lon="-60.828627">
+  <name>Bog Trail</name>
+</wpt>
+<wpt lat="46.817137" lon="-60.839615">
+  <name>Viewpoint</name>
+</wpt>
+<wpt lat="46.828331" lon="-60.797749">
+  <name>Whale Interpretive Center</name>
+  <desc>Box lunch</desc>
+</wpt>
+<wpt lat="46.812288" lon="-60.642811">
+  <name>Viewpoint</name>
+</wpt>
+<wpt lat="46.775469" lon="-60.333529">
+  <name>June 26, 2025 at 2:44 PM</name>
+</wpt>
+<wpt lat="46.650347" lon="-60.390012">
+  <name>Ingonish Beach</name>
+</wpt>
+<wpt lat="45.909752" lon="-59.984337">
+  <name>Louisbourg Visitor Center</name>
+</wpt>
+<wpt lat="45.892417" lon="-59.98567">
+  <name>Engineer's Residence / La résidence de l'ingénieur</name>
+</wpt>
+<wpt lat="45.892913" lon="-59.985363">
+  <name>Grandchamp House Restaurant / Restaurant Maison Grandchamp</name>
+</wpt>
+<wpt lat="45.889111" lon="-59.985436">
+  <name>Fortress of Louisbourg</name>
+</wpt>
+<wpt lat="46.09983" lon="-60.751891">
+  <name>Highwheeler Cafe</name>
+</wpt>
+<wpt lat="46.09453" lon="-60.754685">
+  <name>Building</name>
+  <desc>Lakeside Restaurant</desc>
+</wpt>
+<wpt lat="45.646593" lon="-61.405342">
+  <name>Building</name>
+</wpt>
+<wpt lat="45.674627" lon="-62.710244">
+  <name>Ship Hector Replica</name>
+</wpt>
+<wpt lat="45.738581" lon="-62.689302">
+  <name>Caribou</name>
+</wpt>
+<wpt lat="45.954142" lon="-62.749072">
+  <name>Wood Islands</name>
+</wpt>
+<wpt lat="46.234855" lon="-63.13069">
+  <name>Rodd Charlottetown Hotel</name>
+</wpt>
+<wpt lat="46.234489" lon="-63.126897">
+  <name>Confederation Centre of the Arts</name>
+</wpt>
+<wpt lat="46.232652" lon="-63.124277">
+  <name>Bonded Warehouse</name>
+</wpt>
+<wpt lat="46.234155" lon="-63.124453">
+  <name>The Great George</name>
+</wpt>
+<wpt lat="46.233442" lon="-63.12585">
+  <name>The Gahan House</name>
+</wpt>
+<wpt lat="46.233702" lon="-63.125197">
+  <name>Saint Dunstan Cathedral Basilica</name>
+</wpt>
+<wpt lat="46.232214" lon="-63.125461">
+  <name>Kettle Black</name>
+</wpt>
+<wpt lat="46.428909" lon="-63.199478">
+  <name>Brackley Beach Complex</name>
+</wpt>
+<wpt lat="46.429968" lon="-63.193422">
+  <name>Shaw's Beach</name>
+</wpt>
+<wpt lat="46.409107" lon="-63.348172">
+  <name>Prince Edward Island Preserve Company</name>
+</wpt>
+<wpt lat="46.488743" lon="-63.382106">
+  <name>Green Gables</name>
+</wpt>
+<wpt lat="46.250254" lon="-63.704555">
+  <name>CN Borden-Carleton Interpretive Centre</name>
+</wpt>
+<wpt lat="46.250058" lon="-63.705076">
+  <name>Point Borden Range Rear Lighthouse</name>
+</wpt>
+<wpt lat="46.124933" lon="-64.827886">
+  <name><![CDATA[Sophia & Spritz]]></name>
+</wpt>
+<wpt lat="46.088134" lon="-64.776634">
+  <name>Delta Beausejour</name>
+</wpt>
+<wpt lat="46.086849" lon="-64.773587">
+  <name>TransCanada Trail</name>
+</wpt>
+<wpt lat="45.821019" lon="-64.572711">
+  <name>Lovers Arch</name>
+</wpt>
+<wpt lat="45.816712" lon="-64.578513">
+  <name>High Tide Café</name>
+</wpt>
+<wpt lat="46.240188" lon="-64.529306">
+  <name>croisières SHEDIAC BAY cruises</name>
+</wpt>
+<wpt lat="46.244586" lon="-64.560583">
+  <name>Lobster dinner</name>
+</wpt>
+<wpt lat="45.694623" lon="-64.44969">
+  <name>Joggins Fossil Centre</name>
+</wpt>
+<wpt lat="45.693906" lon="-64.450651">
+  <name>Stairs</name>
+</wpt>
+<wpt lat="45.565083" lon="-63.153804">
+  <name>Sugar Moon Farm</name>
+</wpt>
+<wpt lat="44.650087" lon="-63.57394">
+  <name>Baton Rouge</name>
+</wpt>
+<wpt lat="44.49405" lon="-63.913471">
+  <name>Peggys Point Road, 96</name>
+</wpt>
+<wpt lat="44.49172" lon="-63.918692">
+  <name>Peggys Point Lighthouse</name>
+</wpt>
+<wpt lat="44.58934" lon="-64.220755">
+  <name>Highway 103, 3459</name>
+  <desc>Construction stop; Bluenose video</desc>
+</wpt>
+<wpt lat="44.380125" lon="-64.313731">
+  <name>Lunenburg Academy</name>
+</wpt>
+<wpt lat="44.378809" lon="-64.311923">
+  <name>July 3, 2025 at 12:59 PM</name>
+</wpt>
+<wpt lat="44.378123" lon="-64.311133">
+  <name>Saint John's Anglican Church</name>
+</wpt>
+<wpt lat="44.375969" lon="-64.309989">
+  <name>Fishermen's Tribute</name>
+</wpt>
+<wpt lat="44.3764" lon="-64.310971">
+  <name>Montague Street, 84</name>
+  <desc>Dockside Restaurant</desc>
+</wpt>
+<wpt lat="44.376107" lon="-64.311987">
+  <name>Fisheries Museum of the Atlantic</name>
+</wpt>
+<wpt lat="44.638609" lon="-63.565181">
+  <name>Pier 21</name>
+</wpt>
+<wpt lat="44.646412" lon="-63.569933">
+  <name>Building</name>
+  <desc>Black Bear Ice Cream</desc>
+</wpt>
+<wpt lat="44.641047" lon="-63.559472">
+  <name>Georges Island National Historic Site</name>
+</wpt>
+<wpt lat="44.642517" lon="-63.559991">
+  <name>George's Island</name>
+</wpt>
+<wpt lat="44.639837" lon="-63.566301">
+  <name>Garrison Brewery</name>
+</wpt>
+<wpt lat="44.65063" lon="-63.572793">
+  <name>Halifax Waterfront Boardwalk</name>
+  <desc>Halifax harbor tours</desc>
+</wpt>
+<wpt lat="44.643599" lon="-63.568388">
+  <name>Bicycle Thief</name>
+</wpt>
+<wpt lat="44.644368" lon="-63.570273">
+  <name>Halifax Brewery Farmers Market</name>
+</wpt>
+<wpt lat="44.646221" lon="-63.574157">
+  <name>Durty Nelly's Irish Pub</name>
+</wpt>
+<wpt lat="44.886623" lon="-63.514835">
+  <name>Halifax Stanfield International</name>
+</wpt>
+</gpx>
