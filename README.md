@@ -1,7 +1,4 @@
-# JonathanDoughty.github.io
+## Maps from trips
 
-## Jonathan's public stuff
-
-Here you'll find a collection of work that requires a web server to publish.
-
-* [Utah Map](RoadScholarUtah/)
+* [Canadian Maritimes 2025](Maritimes2025/)
+* [Utah 2024](RoadScholarUtah/)

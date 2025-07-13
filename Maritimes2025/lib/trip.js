@@ -21,7 +21,9 @@ var defaultBaseLayer = 'OpenStreetMap';
 
 var aboutText = `<div style="width:80vw height=90vh">
 <p>
-This map represents stops we made on a trip to Nova Scotia, Prince Edward Island, and New Brunswick in June/July 2025; 80 locations.
+Wherever we go I like to keep a record of our stopping places to jog future memories.
+This map represents 80 locations we made stops at on a trip to Nova Scotia, Prince Edward Island,
+and New Brunswick in June/July 2025.
 </p>
 <h2>Usage</h2>
 <p>
