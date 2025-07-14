@@ -32,7 +32,7 @@ extent of all the marker locations.
 </p>
 <p>
 Markers that have not been clustered appear as blue bubbles - clicking one of those will show
-the number of responses associated with the indicated museum. Markers that are in close
+whatever details OpenStreetMap had when the pin was dropped. Markers that are in close
 proximity to others will be clustered and colored to indicate the number of markers at that
 location. Clicking on one of these will zoom the map to enclose just those markers and expand
 the cluster into smaller clusters and distinct markers.
@@ -70,9 +70,6 @@ symbolize them as the numbered circles.
 <a href="https://github.com/cliffcloud/Leaflet.EasyButton" target="explainer"
 >EasyButton</a> a leaflet control to add buttons to provide the reset map and this popup display
 capabilities.
-</li>
-<li>
-<a href="https://www.papaparse.com/" target-"explainer">Papa Parse</a> a JavaScript in-browser CSV parser.
 </li>
 </ul>
 <p>
