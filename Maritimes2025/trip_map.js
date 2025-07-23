@@ -2,8 +2,13 @@
 // Copyright (c) 2025, JonathanDoughty
 // See ../LICENSE
 
-var tripMap = L.map('map-id');
+var tripMap = L.map('map-id', {
+    minZoom: 3,                 // continent sized on small devices
+    maxBounds: [[-90,-180],[90,180]],
+    maxBoundsViscosity: 1.0,
+});
 var markerData = waypoints; // from Maritimes2025.js
+
 
 function popupContent(props) {
     var popupText = `<p><strong>${props.name}</strong>`;
