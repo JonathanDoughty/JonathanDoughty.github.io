@@ -40,6 +40,7 @@ function addMarkersToMap(map, markers) {
 
     // And fit the map to the markers' extent
     map.fitBounds(markerLayer.getBounds())
+    return clusters
 }
 
 function addReset(map) {
@@ -114,6 +115,30 @@ function addAbout(map) {
     aboutButton.addTo(map);
 }
 
+function addLegend(map, layer) {
+    const legend = L.control.Legend({
+        position: "bottomleft",
+        collapsed: false,
+        symbolWidth: 32,
+        opacity: .5,
+        column: 1,
+        collapsed: false,
+        layers: [ layer ],
+        legends: [{
+            label: "Visited location - Click for details",
+            type: "image",
+            url: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+        }, {
+            label: "Multiple locations - Zoom to expand",
+            type: "image",
+            url: "data/cluster_example.png"
+        }]
+    }).addTo(map);
+
+    // Every map wants a scale bar, no?
+    L.control.scale({position: 'bottomright'}).addTo(map);
+}
+
 function sizes() {
     // https://stackoverflow.com/a/62278401
     const contentWidth = [...document.body.children].reduce(
@@ -139,14 +164,13 @@ function composeMap(map, baseMaps, defaultBaseLayer, markers) {
     L.control.layers(baseMaps).addTo(map);
     baseMaps[defaultBaseLayer].addTo(map);
 
-    addMarkersToMap(map, markers);
+    markerLayer = addMarkersToMap(map, markers);
 
     addReset(map);
 
     addAbout(map);
 
-    // Every map wants a scale bar, no?
-    L.control.scale({position: 'bottomright'}).addTo(map);
+    addLegend(map, markerLayer);
 }
 
 composeMap(tripMap, baseLayers, defaultBaseLayer, markerData);

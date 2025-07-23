@@ -76,3 +76,19 @@ Map will at least render, for the small amount of browsers that DON'T support fl
         flex: 1 0 auto;
     }
 }
+
+/* Override some leaflet-legend styles to shrink the legend box */
+.leaflet-legend-title {
+    text-align: center;
+    margin: 1px;
+    padding-bottom: 0px;
+}
+
+.leaflet-legend-column {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.leaflet-legend-expanded .leaflet-legend-contents {
+  padding: 1px 2px 1px 3px;
+}

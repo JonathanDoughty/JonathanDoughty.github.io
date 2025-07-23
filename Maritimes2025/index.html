@@ -4,7 +4,6 @@
     <title>Jonathan's Trip Pins</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lib/trip_map.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
           crossorigin=""/>
@@ -17,6 +16,9 @@
     <script src="lib/leaflet.markercluster.js"></script>
     <link rel="stylesheet" href="lib/easy-button.css" />
     <script src="lib/easy-button.js"></script>
+    <link rel="stylesheet" href="lib/leaflet.legend.css" />
+    <script type="text/javascript" src="lib/leaflet.legend.js"></script>
+    <link rel="stylesheet" href="lib/trip.css" />
   </head>
   <body>
     <div class="container">
@@ -27,10 +29,6 @@
         <p>The Best of the Canadian Maritimes - Jun 23 - Jul 4, 2025</p>
       </div>
       <div class="map-container">
-        <p>Markers with numbers denote multiple stops recorded at nearby
-          locations. Zoom in to see additional details. Blue balloons indicate
-          individual stops. Click on those to see location info.
-          The about dialog (?) has additional information.</p>
         <div class="map-frame">
           <div id="map-id"></div>
         </div>
