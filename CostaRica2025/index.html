@@ -23,6 +23,7 @@
     <script src="lib/easy-button.js"></script>
     <link rel="stylesheet" href="lib/leaflet.legend.css" />
     <script type="text/javascript" src="lib/leaflet.legend.js"></script>
+    <script type="text/javascript" src="lib/leaflet-omnivore.min.js"></script>
     <link rel="stylesheet" href="trip_map.css" />
   </head>
   <body>
@@ -34,7 +35,15 @@
       </div>
       <div class="map-container">
         <div class="map-frame">
-          <div id="map-id"></div>
+          <div id="loading" class="loading">
+            <div id="error-container"></div>
+            <div class="loading-spinner"></div>
+            <div style="height: 100px; line-height: 100px; text-align: center;">
+              <span style="display: inline-block; vertical-align: middle;
+                           line-height: normal;">Loading map data...</span>
+            </div>
+          </div>
+          <div id="map" style="display: none;"></div>
         </div>
       </div>
       <div class="footer">
@@ -42,9 +51,11 @@
           the usage of KML or GPX files exported from Organic maps.</p>
       </div>
     </div>
+    <!-- Hidden element containing the file path -->
+    <div id="data-file-path" data-file="data/Costa Rica 2025.gpx" style="display: none;"></div>
     <script src="about.js" type="text/javascript"></script>
     <script src="base_maps.js" type="text/javascript"></script>
-    <div id="data_source" data-kml='["data/Costa Rica 2025.kml"]'></div>
+    <script src="map_data_loader.js" type="text/javascript"></script>
     <script src="trip_map.js" type="text/javascript"></script>
   </body>
 </html>
