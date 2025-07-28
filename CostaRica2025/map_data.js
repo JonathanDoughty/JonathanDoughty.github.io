@@ -108,6 +108,7 @@ class MapDataLoader {
             if (bounds.isValid()) {
                 document.getElementById('loading').style.display = 'none';
                 this.dataLayer.addTo(this.map);
+                this.map.fitBounds(bounds, { padding: [20, 20] });
             } else {
                 throw new Error('No geographic features found in ' + filePath);
             }

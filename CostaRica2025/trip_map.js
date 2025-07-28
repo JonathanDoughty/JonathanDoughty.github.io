@@ -7,6 +7,7 @@ var tripMap = L.map('map-id', {
     maxBounds: [[-90,-180],[90,180]],
     maxBoundsViscosity: 1.0,
 });
+var mouseCoordinates = false;   // true to enable coordinate readout
 
 function popupContent(props) {
     var popupText = `<p><strong>${props.name}</strong>`;
@@ -150,6 +151,10 @@ function addLegend(map) {
     L.control.scale({position: 'bottomright'}).addTo(map);
 }
 
+function addCoordinateDisplay(map) {
+    let coordP = L.control.coordProjection({position: 'bottomright'}).addTo(map);
+}
+
 function browserSizes() {
     // https://stackoverflow.com/a/62278401
     const contentWidth = [...document.body.children].reduce(
@@ -182,6 +187,9 @@ function composeMap(map, baseMaps, defaultBaseLayer) {
     addReset(map)
     addAbout(map);
     addLegend(map);
+    if (mouseCoordinates) {
+        addCoordinateDisplay(map);
+    }
 }
 
 composeMap(tripMap, baseLayers, defaultBaseLayer);
