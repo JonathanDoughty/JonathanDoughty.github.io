@@ -1,6 +1,12 @@
-// Trip marker display
-// Copyright (c) 2025, JonathanDoughty
+// Leaflet-based map display for trip locations visited
+// Copyright (c) 2025, Jonathan Doughty
 // See ../LICENSE
+
+var tripMap = L.map('map-id', {
+    minZoom: 3,                 // continent sized on small devices
+    maxBounds: [[-90,-180],[90,180]],
+    maxBoundsViscosity: 1.0,
+});
 
 function popupContent(props) {
     var popupText = `<p><strong>${props.name}</strong>`;
@@ -41,9 +47,18 @@ function addMarkersToMap(map, markers) {
 }
 
 function addReset(map) {
-    // Add a reset control
-    var center = map.getCenter();
-    var initialZoom = map.getZoom();
+    // Add a reset control, with a default center and zoom if not already set
+
+    var center = { lat: 38.88943, lon: -77.0353955 }; // Washington monument
+    var initialZoom = 8;
+
+    if (map.options.center) {
+        center = map.getCenter();
+        initialZoom = map.getZoom();
+    } else {
+        map.setView(center, initialZoom);
+    }
+
     var resetButton = L.easyButton({
         id: 'reset',
         //leafletClasses: false,
@@ -75,7 +90,7 @@ function addReset(map) {
 }
 
 function addAbout(map) {
-    var dimensions = sizes();
+    var dimensions = browserSizes();
 
     var popup = L.popup({
         maxHeight: dimensions.windowHeight * .5,
@@ -112,7 +127,7 @@ function addAbout(map) {
     aboutButton.addTo(map);
 }
 
-function addLegend(map, layer) {
+function addLegend(map) {
     const legend = L.control.Legend({
         position: "bottomleft",
         collapsed: false,
@@ -120,7 +135,6 @@ function addLegend(map, layer) {
         opacity: .5,
         column: 1,
         collapsed: false,
-        layers: [ layer ],
         legends: [{
             label: "Visited location - Click for details",
             type: "image",
@@ -136,7 +150,7 @@ function addLegend(map, layer) {
     L.control.scale({position: 'bottomright'}).addTo(map);
 }
 
-function sizes() {
+function browserSizes() {
     // https://stackoverflow.com/a/62278401
     const contentWidth = [...document.body.children].reduce(
         (a, el) => Math.max(a, el.getBoundingClientRect().right), 0)
@@ -156,29 +170,16 @@ function sizes() {
     }
 }
 
-function composeMap(map, baseMaps, defaultBaseLayer, markers) {
+function composeMap(map, baseMaps, defaultBaseLayer) {
 
     L.control.layers(baseMaps).addTo(map);
     baseMaps[defaultBaseLayer].addTo(map);
 
-    addReset(map);              // This needs to be added after data has been loaded
+    var markers;
 
+    addReset(map)
     addAbout(map);
-
-    addLegend(map, markerLayer);
+    addLegend(map);
 }
 
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    var map = L.map('map', {
-        minZoom: 3,                 // continent sized on small devices
-        maxBounds: [[-90,-180],[90,180]],
-        maxBoundsViscosity: 1.0,
-    });
-
-    /* baselayers and defaultBaseLayer from base_maps.js along with tile providers */
-    composeMap(map, baseLayers, defaultBaseLayer);
-
-    const loader = new MapDataLoader();
-    loader.initializeMapData(map);
-});
+composeMap(tripMap, baseLayers, defaultBaseLayer);

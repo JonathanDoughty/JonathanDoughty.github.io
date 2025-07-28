@@ -54,10 +54,6 @@ html, body {
     height: 100%;
 }
 
-.disabled {
-    display: hidden;
-}
-
 /*
 Support for browsers that DON'T support Flexbox uses 100% height on the map-container defined above.
 Map will at least render, for the small amount of browsers that DON'T support flexbox. Users will just have to scroll abit ¯\_(ツ)_/¯
