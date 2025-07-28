@@ -176,6 +176,8 @@ function composeMap(map, baseMaps, defaultBaseLayer) {
     baseMaps[defaultBaseLayer].addTo(map);
 
     var markers;
+    const loader = new MapDataLoader();
+    loader.initializeMapData(map);
 
     addReset(map)
     addAbout(map);
