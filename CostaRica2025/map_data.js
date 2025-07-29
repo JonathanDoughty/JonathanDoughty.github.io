@@ -30,20 +30,36 @@ class MapDataLoader {
     }
 
     // Add popup content to features
-    onEachFeature(feature, layer) {
+    describeFeature(feature, layer) {
         let popupContent = '';
 
         if (feature.properties.name) {
             popupContent += `<strong>${feature.properties.name}</strong>`;
         }
         if (feature.properties.description || feature.properties.desc) {
-            const desc = feature.properties.description || feature.properties.desc;
-            popupContent += popupContent ? `<br>${desc}` : desc;
+            const text = feature.properties.description || feature.properties.desc;
+            popupContent += popupContent ? `<br>${text}` : text;
         }
 
         if (popupContent) {
             layer.bindPopup(popupContent);
         }
+    }
+
+    // add popups for markers, styling for non-points
+    symbolizeFeatures(layer) {
+        // Apply styling and features
+        layer.eachLayer((sublayer) => {
+            if (sublayer.feature) {
+                // Apply popup descriptions
+                this.describeFeature(sublayer.feature, sublayer);
+
+                // Apply styling for lines
+                if (sublayer.setStyle && sublayer.feature.geometry.type !== 'Point') {
+                    sublayer.setStyle(this.styleFeature(sublayer.feature));
+                }
+            }
+        })
     }
 
     // Load data using omnivore
@@ -64,19 +80,7 @@ class MapDataLoader {
 
             // Set up event handlers
             layer.on('ready', () => {
-                // Apply styling and features
-                layer.eachLayer((sublayer) => {
-                    if (sublayer.feature) {
-                        // Apply popup functionality
-                        this.onEachFeature(sublayer.feature, sublayer);
-
-                        // Apply styling for lines
-                        if (sublayer.setStyle && sublayer.feature.geometry.type !== 'Point') {
-                            sublayer.setStyle(this.styleFeature(sublayer.feature));
-                        }
-                    }
-                });
-
+                this.symbolizeFeatures(layer);
                 resolve(layer);
             });
 
