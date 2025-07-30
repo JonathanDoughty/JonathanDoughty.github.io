@@ -10,43 +10,6 @@ let tripMap = L.map('map-id', {
 var defaultBaseLayer = 'CartoDB'; // Override the default defined in base_maps.js
 let mouseCoordinates = false;     // true to enable coordinate readout
 
-function popupContent(props) {
-    let popupText = `<p><strong>${props.name}</strong>`;
-    if (props.undefined) {        // doesn't seem to be anything else useful
-        popupText += `<br/>${props.undefined},`;
-    } else {
-        popupText += '<br/>';
-    }
-    popupText += '</p>';
-    return popupText;
-}
-
-function symbolizeMarker(feature, layer) {
-     if (feature.properties) {
-        layer.bindPopup(popupContent(feature.properties));
-    }
-}
-
-function addMarkersToMap(map, markers) {
-
-    // Arrange that markers in the approximately same location will get clustered
-    let clusters = L.markerClusterGroup();
-
-    // ... and add markers for each feature
-    let markerLayer = L.geoJSON(markers, {
-        onEachFeature: symbolizeMarker
-    });
-
-    // Cluster the markers
-    markerLayer.addTo(clusters);
-
-    // Add the clusters to the map
-    map.addLayer(clusters);
-
-    // And fit the map to the markers' extent
-    map.fitBounds(markerLayer.getBounds())
-    return clusters
-}
 
 class ResetButton {     // Add a reset control, with a default center and zoom if not already set
 
