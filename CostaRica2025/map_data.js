@@ -92,7 +92,7 @@ class MapDataLoader {
     }
 
     // Initialize the map and load data
-    async initializeMapData(map) {
+    async initializeMapData(map, reset) {
         try {
             this.map = map;
 
@@ -113,6 +113,7 @@ class MapDataLoader {
                 document.getElementById('loading').style.display = 'none';
                 this.dataLayer.addTo(this.map);
                 this.map.fitBounds(bounds, { padding: [20, 20] });
+                reset.update();
             } else {
                 throw new Error('No geographic features found in ' + filePath);
             }
@@ -125,5 +126,6 @@ class MapDataLoader {
         const errorContainer = document.getElementById('error-container');
         errorContainer.innerHTML = `<div class="error">Error: ${message}</div>`;
         document.getElementById('loading').style.display = 'none';
+        console.log("Error: " + message);
     }
 }
