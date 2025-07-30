@@ -9,7 +9,7 @@ let tripMap = L.map('map-id', {
 });
 var defaultBaseLayer = 'CartoDB'; // Override the default defined in base_maps.js
 let mouseCoordinates = false;     // true to enable coordinate readout
-
+let clusterFeatures = true;
 
 class ResetButton {     // Add a reset control, with a default center and zoom if not already set
 
@@ -187,9 +187,8 @@ function composeMap(map, baseMaps, defaultBaseLayer) {
     baseMaps[defaultBaseLayer].addTo(map);
     const reset = addReset(map)
 
-    let markers;
     const loader = new MapDataLoader();
-    loader.initializeMapData(map, reset);
+    loader.initializeMapData(map, reset, clusterFeatures);
 
     addAbout(map);
     addLegend(map);

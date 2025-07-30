@@ -46,6 +46,7 @@ class MapDataLoader {
     constructor() {
         this.map = null;
         this.dataLayer = null;
+        this.cluster = false;
     }
 
     // Style function for different feature types
@@ -89,7 +90,11 @@ class MapDataLoader {
                 // Apply styling for lines
                 if (sublayer.setStyle && sublayer.feature.geometry.type !== 'Point') {
                     sublayer.setStyle(this.styleFeature(sublayer.feature));
+                } else {
+                    console.log("Point feature " + sublayer.feature);
                 }
+            } else {
+                console.log("sublayer non feature?:" + sublayer);
             }
         })
     }
@@ -112,8 +117,15 @@ class MapDataLoader {
 
             // Set up event handlers
             layer.on('ready', () => {
-                this.symbolizeFeatures(layer);
-                resolve(layer);
+                if (this.cluster) {
+                    // Arrange that markers in the approximately same location will get clustered
+                    let clusterLayer = L.markerClusterGroup();
+                    clusterLayer.addLayer(layer);
+                    resolve(clusterLayer);
+                } else {
+                    this.symbolizeFeatures(layer);
+                    resolve(layer);
+                }
             });
 
             layer.on('error', (e) => {
@@ -124,9 +136,10 @@ class MapDataLoader {
     }
 
     // Initialize the map and load data
-    async initializeMapData(map, reset) {
+    async initializeMapData(map, reset, cluster) {
         try {
             this.map = map;
+            this.cluster = cluster;
 
             // Get file path from hidden element
             const dataElement = document.getElementById('data-file-path');
