@@ -7,7 +7,8 @@ let tripMap = L.map('map-id', {
     maxBounds: [[-90,-180],[90,180]],
     maxBoundsViscosity: 1.0,
 });
-let mouseCoordinates = false;   // true to enable coordinate readout
+var defaultBaseLayer = 'CartoDB'; // Override the default defined in base_maps.js
+let mouseCoordinates = false;     // true to enable coordinate readout
 
 function popupContent(props) {
     let popupText = `<p><strong>${props.name}</strong>`;
