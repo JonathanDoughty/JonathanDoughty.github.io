@@ -57,16 +57,6 @@ class ResetButton {     // Add a reset control, with a default center and zoom i
         this.button = null;
         this.update = this.update.bind(this);
         this.resetMap = this.resetMap.bind(this);
-        this.zoomLevel = this.zoomLevel.bind(this);
-        this.currentCenter = this.currentCenter.bind(this);
-    }
-
-    zoomLevel() {
-        return this.initialZoom;
-    }
-
-    currentCenter() {
-        return this.center;
     }
 
     update() {
@@ -75,8 +65,17 @@ class ResetButton {     // Add a reset control, with a default center and zoom i
         this.button.disable();
     }
 
+    backAtOrigin() {
+        var delta = this.map.distance(this.map.getCenter(), this.center);
+        if(this.map.getZoom() == this.initialZoom && delta < 150) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     resetMap() {
-        if (this.map.getZoom() != this.initialZoom) {
+        if (! this.backAtOrigin() ) {
             this.map.setView(this.center, this.initialZoom);
         }
         this.button.disable();
@@ -88,6 +87,7 @@ class ResetButton {     // Add a reset control, with a default center and zoom i
             return this;
         }
 
+        this.map = map;
         var resetFunc = this.resetMap;
         var button = L.easyButton({
             id: 'reset',
@@ -106,27 +106,23 @@ class ResetButton {     // Add a reset control, with a default center and zoom i
 
         button.addTo(map);
         button.disable();
+        this.button = button;
         var reset = this;
 
         map.on('zoomend', function(e) {
-            // Sigh; DRY
-            var currZoom = e.target.getZoom();
-            if(currZoom == reset.zoomLevel() && e.target.getCenter() == reset.currentCenter()) {
+            if (reset.backAtOrigin()) {
                 button.disable();
             } else {
                 button.enable();
             }
         });
         map.on('moveend', function(e) {
-            var currZoom = e.target.getZoom();
-            if(currZoom == reset.zoomLevel() && e.target.getCenter() == reset.currentCenter()) {
+            if (reset.backAtOrigin()) {
                 button.disable();
             } else {
                 button.enable();
             }
         });
-        this.button = button;
-        this.map = map;
         return this;
     }
 }
