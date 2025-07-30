@@ -61,18 +61,6 @@ class MapDataLoader {
         return { color: '#3388ff', weight: 2, opacity: 0.8 };
     }
 
-    // Point styling for markers
-    pointStyle(feature, latlng) {
-        return L.circleMarker(latlng, {
-            radius: 6,
-            fillColor: '#ff4444',
-            color: '#fff',
-            weight: 2,
-            opacity: 1,
-            fillOpacity: 0.8
-        });
-    }
-
     // Add popup content to features
     describeFeature(feature, layer) {
         let popupContent = '';
