@@ -2,15 +2,15 @@
 // Copyright (c) 2025, Jonathan Doughty
 // See ../LICENSE
 
-var tripMap = L.map('map-id', {
+let tripMap = L.map('map-id', {
     minZoom: 3,                 // continent sized on small devices
     maxBounds: [[-90,-180],[90,180]],
     maxBoundsViscosity: 1.0,
 });
-var mouseCoordinates = false;   // true to enable coordinate readout
+let mouseCoordinates = false;   // true to enable coordinate readout
 
 function popupContent(props) {
-    var popupText = `<p><strong>${props.name}</strong>`;
+    let popupText = `<p><strong>${props.name}</strong>`;
     if (props.undefined) {        // doesn't seem to be anything else useful
         popupText += `<br/>${props.undefined},`;
     } else {
@@ -29,10 +29,10 @@ function symbolizeMarker(feature, layer) {
 function addMarkersToMap(map, markers) {
 
     // Arrange that markers in the approximately same location will get clustered
-    var clusters = L.markerClusterGroup();
+    let clusters = L.markerClusterGroup();
 
     // ... and add markers for each feature
-    var markerLayer = L.geoJSON(markers, {
+    let markerLayer = L.geoJSON(markers, {
         onEachFeature: symbolizeMarker
     });
 
@@ -66,7 +66,7 @@ class ResetButton {     // Add a reset control, with a default center and zoom i
     }
 
     backAtOrigin() {
-        var delta = this.map.distance(this.map.getCenter(), this.center);
+        let delta = this.map.distance(this.map.getCenter(), this.center);
         if(this.map.getZoom() == this.initialZoom && delta < 150) {
             return true;
         } else {
@@ -88,8 +88,8 @@ class ResetButton {     // Add a reset control, with a default center and zoom i
         }
 
         this.map = map;
-        var resetFunc = this.resetMap;
-        var button = L.easyButton({
+        let resetFunc = this.resetMap;
+        let button = L.easyButton({
             id: 'reset',
             states:[
                 {
@@ -107,7 +107,7 @@ class ResetButton {     // Add a reset control, with a default center and zoom i
         button.addTo(map);
         button.disable();
         this.button = button;
-        var reset = this;
+        let reset = this;
 
         map.on('zoomend', function(e) {
             if (reset.backAtOrigin()) {
@@ -133,16 +133,16 @@ function addReset(map) {
 }
 
 function addAbout(map) {
-    var dimensions = browserSizes();
+    let dimensions = browserSizes();
 
-    var popup = L.popup({
+    let popup = L.popup({
         maxHeight: dimensions.windowHeight * .5,
         maxWidth: dimensions.windowWidth * .75,
         keepInView: true,
         autoPan: false
     }).setContent(aboutText);
 
-    var aboutButton = L.easyButton({
+    let aboutButton = L.easyButton({
         id: 'about',
         //leafletClasses: false,
         states:[
@@ -155,13 +155,13 @@ function addAbout(map) {
                     // close to the top and the close button will be occluded by the layer
                     // switcher. Too close to the bottom and the scale bar will cut off the
                     // last words.
-                    var center = map.getCenter();
-                    var latLngBnds = map.getBounds();
-                    var latLong = L.latLng(latLngBnds.getSouth(), center.lng);
-                    var point = map.latLngToLayerPoint(latLong);
-                    var offset = dimensions.windowHeight * .075;
-                    var popupPoint = L.point(point.x, point.y - offset);
-                    var popupPosition = map.layerPointToLatLng(popupPoint);
+                    let center = map.getCenter();
+                    let latLngBnds = map.getBounds();
+                    let latLong = L.latLng(latLngBnds.getSouth(), center.lng);
+                    let point = map.latLngToLayerPoint(latLong);
+                    let offset = dimensions.windowHeight * .075;
+                    let popupPoint = L.point(point.x, point.y - offset);
+                    let popupPosition = map.layerPointToLatLng(popupPoint);
                     popup.setLatLng(popupPosition).openOn(map);
                 }
             }
@@ -223,7 +223,7 @@ function composeMap(map, baseMaps, defaultBaseLayer) {
     baseMaps[defaultBaseLayer].addTo(map);
     const reset = addReset(map)
 
-    var markers;
+    let markers;
     const loader = new MapDataLoader();
     loader.initializeMapData(map, reset);
 
