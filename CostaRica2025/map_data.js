@@ -1,47 +1,3 @@
-class MarkerSymbolizer {
-    constructor(map) {
-        this.map = map;
-    }
-
-    popupContent(props) {
-        let popupText = `<p><strong>${props.name}</strong>`;
-        if (props.undefined) {        // doesn't seem to be anything else useful
-            popupText += `<br/>${props.undefined},`;
-        } else {
-            popupText += '<br/>';
-        }
-        popupText += '</p>';
-        return popupText;
-    }
-
-    symbolizeMarker(feature, layer) {
-        if (feature.properties) {
-            layer.bindPopup(this.popupContent(feature.properties));
-        }
-    }
-
-    addMarkersToMap(markers) {
-
-        // Arrange that markers in the approximately same location will get clustered
-        let clusters = L.markerClusterGroup();
-
-        // ... and add markers for each feature
-        let markerLayer = L.geoJSON(markers, {
-            onEachFeature: this.symbolizeMarker
-        });
-
-        // Cluster the markers
-        markerLayer.addTo(clusters);
-
-        // Add the clusters to the map
-        this.map.addLayer(clusters);
-
-        // And fit the map to the markers' extent
-        this.map.fitBounds(markerLayer.getBounds())
-        return clusters
-    }
-}
-
 class MapDataLoader {
     constructor() {
         this.map = null;
@@ -90,8 +46,6 @@ class MapDataLoader {
                 // Apply styling for lines
                 if (sublayer.setStyle && sublayer.feature.geometry.type !== 'Point') {
                     sublayer.setStyle(this.styleFeature(sublayer.feature));
-                } else {
-                    console.log("Point feature " + sublayer.feature);
                 }
             } else {
                 console.log("sublayer non feature?:" + sublayer);
@@ -120,6 +74,7 @@ class MapDataLoader {
                 if (this.cluster) {
                     // Arrange that markers in the approximately same location will get clustered
                     let clusterLayer = L.markerClusterGroup();
+                    this.symbolizeFeatures(layer);
                     clusterLayer.addLayer(layer);
                     resolve(clusterLayer);
                 } else {
