@@ -64,8 +64,10 @@ class MapDataLoader {
                 layer = omnivore.kml(filePath);
             } else if (fileExtension === 'gpx') {
                 layer = omnivore.gpx(filePath);
+            } else if (fileExtension === 'json') {
+                layer = omnivore.geojson(filePath);
             } else {
-                reject(new Error('Unsupported file format. Please use KML or GPX files.'));
+                reject(new Error('Unsupported file format. Please use KML, GPX, or GeoJSON files.'));
                 return;
             }
 
@@ -123,9 +125,8 @@ class MapDataLoader {
     }
 
     showError(message) {
-        const errorContainer = document.getElementById('error-container');
-        errorContainer.innerHTML = `<div class="error">Error: ${message}</div>`;
-        document.getElementById('loading').style.display = 'none';
+        const statusContainer = document.getElementById('status-container');
+        statusContainer.innerHTML = "<div class='status'>Error: " + message + "</div>";
         console.log("Error: " + message);
     }
 }

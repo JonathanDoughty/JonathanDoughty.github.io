@@ -197,4 +197,16 @@ function composeMap(map, baseMaps, defaultBaseLayer) {
     }
 }
 
+window.addEventListener('unhandledrejection', function(event) {
+    // Fallback error handler
+    const statusContainer = document.getElementById('status-container');
+    statusContainer.innerHTML = '<div class="status">Error: ' + event.reason + '</div>';
+    document.getElementById('loading').style.display = 'none';
+    console.log("Error: " + message);
+    // https://html.spec.whatwg.org/multipage/webappapis.html#unhandled-promise-rejections
+    // the event object has two special properties:
+    // [object Promise] - the promise that generated the error
+    // Error: Whoops! - the unhandled error object
+});
+
 composeMap(tripMap, baseLayers, defaultBaseLayer);

@@ -38,18 +38,16 @@
       <div class="map-container">
         <div class="map-frame">
           <div id="loading" class="loading">
-            <div id="error-container"></div>
             <div class="loading-spinner"></div>
             <div style="height: 100px; line-height: 100px; text-align: center;">
-              <span style="display: inline-block; vertical-align: middle;
-                           line-height: normal;">Loading map data...</span>
+              <span id="status-container">Loading map data...</span>
             </div>
           </div>
           <div id="map-id"></div>
         </div>
       </div>
     </div>
-    <!-- Hidden element containing the file path -->
+    <!-- file path of trip locations visited-->
     <div id="data-file-path" data-file="data/Costa Rica 2025.gpx" style="display: none;"></div>
     <script src="about.js" type="text/javascript"></script>
     <script src="map_data.js" type="text/javascript"></script>
