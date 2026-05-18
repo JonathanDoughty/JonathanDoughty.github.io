@@ -8,8 +8,8 @@ and New Brunswick in June/July 2025 as part of <a target="_blank" href="https://
 </p>
 <h2>Usage</h2>
 <p>
-The code arranges that the map will initially be zoomed to include the geographic
-extent of all the locations I recorded as stops.
+The application arranges that the map will initially include an area slightly larger than the geographic
+extent of all the locations recorded as stops that will have been downloaded from a data file.
 </p>
 <p>
 Markers that have not been clustered appear as blue bubbles
@@ -21,7 +21,7 @@ whatever details OpenStreetMap had when the pin was dropped.
 Markers that are in close
 proximity to others will be clustered and colored
 (<img src="data/cluster_example.png" alt="bubble icon" width="24">)
-to indicate the number of markers at that
+to indicate the number of markers near that
 location. Clicking on one of these will zoom the map to enclose just those markers and expand
 the cluster into smaller clusters and distinct markers.
 </p>
@@ -56,6 +56,11 @@ The <a href="https://github.com/leaflet-extras/leaflet-providers" target="explai
 layer control on the upper right.
 </li>
 <li>
+The <a href="https://github.com/mapbox/leaflet-omnivore" target="explainer"
+>leaflet-omnivore</a>
+plugin handles the conversion of various geospatial data formats into Leaflet layers.
+</li>
+<li>
 The <a href="https://github.com/Leaflet/Leaflet.markercluster" target="explainer"
 >Marker Cluster</a>
 Leaflet Plugin to aggregate markers that would appear too close to one another and
@@ -77,6 +82,5 @@ That plus a bit of JavaScript coding to extract information from the marker
 data and add those as pop up text descriptions for the markers as well as compose
 the whole thing into a web accessible form and implement the extras.
 </p>
-</div>
 </div>
 `;
