@@ -4,11 +4,12 @@
 # Integrate environment variables from, .e.g., ../.env
 set dotenv-load := true
 
-PORT := "3000"
+PORT := "3101"
 
 root := justfile_directory()
 
 _default:
+    printf "Using port: %d\n" "{{PORT}}"
     @just --list
 
 # Serve local content on {{PORT}}
@@ -20,7 +21,7 @@ serve:
     # npx serve --help
     # npx serve --cors &
     if ! check_port; then
-       npx serve --no-clipboard --no-etag --cors &
+       npx serve --no-clipboard --no-etag -p {{PORT}} &
        while ! check_port ; do
           printf "." 1>&2
           sleep .5
@@ -36,7 +37,28 @@ serve:
 stop:
     lsof -i:{{PORT}}
     pkill -f .bin/serve
+    just _tailscale_off
+
+_tailscale_off:
+    #!/usr/bin/env bash
+    if tailscale serve status | grep -q {{PORT}}; then
+       tailscale serve --bg --https={{PORT}} http://127.0.0.1:{{PORT}} off
+    fi
+
+# Toggle tailscale serve of content on {{PORT}}
+tailscale:
+    #!/usr/bin/env bash
+    if lsof -i:{{PORT}} | grep -q node; then
+       if tailscale serve status | grep -q {{PORT}}; then
+          just _tailscale_off
+       else
+          tailscale serve --bg --https={{PORT}} http://127.0.0.1:{{PORT}}
+       fi
+    else
+       : # ?
+    fi
 
 # Show status of {{PORT}}
 status:
-    lsof -i:{{PORT}}
+    @lsof -i:{{PORT}}
+    @tailscale serve status | grep {{PORT}}
