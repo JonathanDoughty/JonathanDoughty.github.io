@@ -3,8 +3,7 @@
 var aboutText = `<div style="width:80vw height=90vh">
 <p>
 Wherever we go I like to keep a record of our stopping places to jog future memories.
-This map represents 80 locations we made stops at on a trip to Nova Scotia, Prince Edward Island,
-and New Brunswick in June/July 2025 as part of <a target="_blank" href="https://www.roadscholar.org/find-an-adventure/3788/The-Best-of-the-Canadian-Maritimes">Road Scholar 3788</a>.
+This map represents 46 locations we made stops at on a trip to Costa Rica in Jan 2025 as part of <a target="_blank" href="https://www.roadscholar.org/find-an-adventure/8577/A-Taste-of-Costa-Rica">Road Scholar 8577</a>.
 </p>
 <h2>Usage</h2>
 <p>
@@ -33,7 +32,7 @@ Map Zoom levels can be manually controlled using the + and - controls in the upp
 Clicking the reset button, enabled if you've changed things, will return the map to its
 initial geographic extent and zoom level.
 </p>
-<h2>Credits</h2>
+<h2>Credits / Nerdy Details</h2>
 <p>
 I record locations using a mobile app that works using off-line <a
 href="https://www.openstreetmap.org/about target="_explainer">Open Street Map</a> data that I
@@ -83,4 +82,5 @@ That plus a bit of JavaScript coding to extract information from the marker
 data and add those as pop up text descriptions for the markers as well as compose
 the whole thing into a web accessible form and implement the extras.
 </p>
-</div>;
+</div>
+`;
