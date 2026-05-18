@@ -8,8 +8,8 @@ and New Brunswick in June/July 2025 as part of <a target="_blank" href="https://
 </p>
 <h2>Usage</h2>
 <p>
-The code arranges that the map will initially be zoomed to include the geographic
-extent of all the locations I recorded as stops.
+The application arranges that the map will initially include an area slightly larger than the geographic
+extent of all the locations recorded as stops that will have been downloaded from a data file.
 </p>
 <p>
 Markers that have not been clustered appear as blue bubbles
@@ -33,16 +33,17 @@ Map Zoom levels can be manually controlled using the + and - controls in the upp
 Clicking the reset button, enabled if you've changed things, will return the map to its
 initial geographic extent and zoom level.
 </p>
-<h2>Credits / Nerdy Details</h2>
+<h2>Credits</h2>
 <p>
-I record locations using the <a href="https://organicmaps.app/" taget="_explainer">
-Organic Maps app</a> - a free app that works using off-line
-<a href="https://www.openstreetmap.org/about target="_explainer">Open Street Map</a>
-data that I download before leaving on a trip. Great for roaming where cell coverage can be
-chancy.
+I record locations using a mobile app that works using off-line <a
+href="https://www.openstreetmap.org/about target="_explainer">Open Street Map</a> data that I
+download before leaving on a trip. Great for roaming where cell coverage can be chancy.
+Currently I use the <a href="https://www.comaps.app/about-us/" target="_explainer">CoMaps app</a> for this
+recording - a navigation app for travelers - drivers, hikers, and cyclists that emphasizes
+privacy - no identifying people and only local data collection that the user records.
 </p>
 <p>
-The map was made possible by the capabilities of several open-source projects:
+The map was made possible by the capabilities of various open-source projects:
 </p>
 <ul>
 <li>
@@ -54,6 +55,11 @@ basis for this map&rsquo;s display.
 The <a href="https://github.com/leaflet-extras/leaflet-providers" target="explainer"
 >Leaflet-providers</a> extension for selected free base map tile providers - as shown in the
 layer control on the upper right.
+</li>
+<li>
+The <a href="https://github.com/mapbox/leaflet-omnivore" target="explainer"
+>leaflet-omnivore</a>
+plugin handles the conversion of various geospatial data formats into Leaflet layers.
 </li>
 <li>
 The <a href="https://github.com/Leaflet/Leaflet.markercluster" target="explainer"
@@ -77,6 +83,4 @@ That plus a bit of JavaScript coding to extract information from the marker
 data and add those as pop up text descriptions for the markers as well as compose
 the whole thing into a web accessible form and implement the extras.
 </p>
-</div>
-</div>
-`;
+</div>;

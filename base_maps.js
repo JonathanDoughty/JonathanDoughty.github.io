@@ -7,6 +7,7 @@ let baseLayers = {
     'CartoDB (faint)': provider('CartoDB.VoyagerLabelsUnder'),
     'CartoDB Positron': provider('CartoDB.Positron'),
     'OpenStreetMap': provider('OpenStreetMap.Mapnik'),
+    'OpenTopoMap': provider('OpenTopoMap'),
     'Esri Topo': provider('Esri.WorldTopoMap'),
     'Esri Imagery': provider('Esri.WorldImagery'),
     // 'USGS Imagery Topo': provider('USGS.USImageryTopo'),
