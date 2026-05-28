@@ -21,7 +21,7 @@ serve:
     # npx serve --help
     # npx serve --cors &
     if ! check_port; then
-       npx serve --no-clipboard --no-etag -p {{PORT}} &
+       npx serve --no-clipboard --no-etag -p {{PORT}} &> npx.log &
        while ! check_port ; do
           printf "." 1>&2
           sleep .5
@@ -60,5 +60,6 @@ tailscale:
 
 # Show status of {{PORT}}
 status:
-    @lsof -i:{{PORT}}
-    @tailscale serve status | grep {{PORT}}
+    #!/usr/bin/env bash
+    lsof -i:{{PORT}} || printf "Nothing running on port %d\n" "{{PORT}}"
+    tailscale serve status | grep {{PORT}} || printf "No tailscale service on port %d\n" "{{PORT}}"
