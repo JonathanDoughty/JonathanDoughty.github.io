@@ -1,9 +1,26 @@
 /* Slightly adapted from https://gis.stackexchange.com/a/149243/25830 */
+
 html, body {
     height: 100%;
     padding: 0;
     margin: 0;
     background: white;
+}
+
+article {
+  padding: 1ch 2ch;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
 }
 
 .container {
