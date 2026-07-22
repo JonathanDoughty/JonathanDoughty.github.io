@@ -1,11 +1,6 @@
 // Descriptive text for about popup
 
 var aboutText = `<div style="width:80vw height=90vh">
-<p>
-Wherever we go I like to keep a record of our stopping places to jog future memories.
-This map represents 80 locations we made stops at on a trip to Nova Scotia, Prince Edward Island,
-and New Brunswick in June/July 2025 as part of <a target="_blank" href="https://www.roadscholar.org/find-an-adventure/3788/The-Best-of-the-Canadian-Maritimes">Road Scholar 3788</a>.
-</p>
 <h2>Usage</h2>
 <p>
 The application arranges that the map will initially include an area slightly larger than the geographic
