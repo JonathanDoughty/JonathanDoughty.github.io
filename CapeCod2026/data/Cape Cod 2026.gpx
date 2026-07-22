@@ -6,11 +6,157 @@
     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 https://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/gpx_style/0/2 https://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 https://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd">
 <metadata>
   <name>Cape Cod 2026</name>
+  <desc>Road Scholar</desc>
 </metadata>
 <wpt lat="42.36739" lon="-71.023062">
   <name>Hilton Boston Logan Airport</name>
 </wpt>
 <wpt lat="41.648192" lon="-70.28079">
   <name>Hyannis Harbor Hotel</name>
+</wpt>
+<wpt lat="42.366265" lon="-71.022568">
+  <name>Boston Logan International Airport 9/11 Memorial</name>
+</wpt>
+<wpt lat="41.58358" lon="-70.572057">
+  <name>Coonamessett Greenway Heritage Trail</name>
+</wpt>
+<wpt lat="41.524782" lon="-70.671052">
+  <name>WHOI Information Office</name>
+</wpt>
+<wpt lat="41.523229" lon="-70.669544">
+  <name>Quahog Republic Restaurant</name>
+</wpt>
+<wpt lat="41.524304" lon="-70.670271">
+  <name>Water Street</name>
+</wpt>
+<wpt lat="41.524403" lon="-70.671046">
+  <name>WHOI - Smith Laboratory</name>
+</wpt>
+<wpt lat="41.525032" lon="-70.671463">
+  <name>Helican Man sculpture</name>
+</wpt>
+<wpt lat="41.525625" lon="-70.672398">
+  <name>Marine Biological Laboratory</name>
+</wpt>
+<wpt lat="41.524538" lon="-70.668381">
+  <name>WHOI - Endeavor House (Exhibit Center)</name>
+</wpt>
+<wpt lat="41.649225" lon="-70.280389">
+  <name>The Black Cat Tavern</name>
+</wpt>
+<wpt lat="41.654727" lon="-70.41279">
+  <name>Fig Tree Cafe</name>
+</wpt>
+<wpt lat="41.586894" lon="-70.464375">
+  <name>RideAway Adventures Kayaking</name>
+</wpt>
+<wpt lat="41.623119" lon="-70.536088">
+  <name>Ashumet Holly Wildlife Sanctuary</name>
+</wpt>
+<wpt lat="41.647617" lon="-70.27985">
+  <name>Cape Code Creamery</name>
+</wpt>
+<wpt lat="41.653425" lon="-70.282878">
+  <name>Alberto’s Ristorante</name>
+</wpt>
+<wpt lat="41.654017" lon="-70.282547">
+  <name>Finn's Craft Beer Tap House</name>
+</wpt>
+<wpt lat="41.835292" lon="-69.969563">
+  <name>July 15, 2026 at 10:03 AM</name>
+  <desc>Seal sighting</desc>
+</wpt>
+<wpt lat="41.838252" lon="-69.972202">
+  <name>Salt Pond Visitor Center</name>
+</wpt>
+<wpt lat="41.913319" lon="-69.971765">
+  <name>Marconi Wireless Station</name>
+</wpt>
+<wpt lat="41.912886" lon="-69.972934">
+  <name>Atlantic White Cedar Swamp Trail</name>
+</wpt>
+<wpt lat="41.912826" lon="-69.977053">
+  <name>Old Wireless Road</name>
+</wpt>
+<wpt lat="41.882616" lon="-69.995434">
+  <name>Esther Underwood Johnson Nature Center</name>
+</wpt>
+<wpt lat="41.880904" lon="-69.998352">
+  <name>Mass Audubon Wellfleet Bay Wildlife Sanctuary</name>
+</wpt>
+<wpt lat="41.892212" lon="-69.987563">
+  <name>The Block and Tackle></name>
+</wpt>
+<wpt lat="41.886407" lon="-69.996526">
+  <name>Bay View Trail</name>
+</wpt>
+<wpt lat="41.882008" lon="-69.996286">
+  <name>#5 Salt marsh overlook</name>
+</wpt>
+<wpt lat="41.880634" lon="-70.00127">
+  <name>Goose Pond Trail</name>
+</wpt>
+<wpt lat="42.051082" lon="-70.186025">
+  <name>MacMillan Pier Bus Station</name>
+</wpt>
+<wpt lat="42.053522" lon="-70.184441">
+  <name>Provincetown Public Library</name>
+</wpt>
+<wpt lat="42.054267" lon="-70.182898">
+  <name>Helltown Kitchen</name>
+</wpt>
+<wpt lat="42.077225" lon="-70.169041">
+  <name>Dune group picture</name>
+</wpt>
+<wpt lat="42.052176" lon="-70.186014">
+  <name>Art's Dune Tours</name>
+</wpt>
+<wpt lat="42.053064" lon="-70.184072">
+  <name>Twisted Treats Chimney Cakes</name>
+</wpt>
+<wpt lat="42.051487" lon="-70.187573">
+  <name>Veterans Memorial</name>
+</wpt>
+<wpt lat="42.051678" lon="-70.186113">
+  <name>The Mayflower</name>
+</wpt>
+<wpt lat="41.706885" lon="-70.299076">
+  <name>Hyannis Whale Watcher</name>
+</wpt>
+<wpt lat="41.761914" lon="-70.274048">
+  <name>July 17, 2026 at 10:55 AM</name>
+</wpt>
+<wpt lat="41.78375" lon="-70.274545">
+  <name>July 17, 2026 at 10:58 AM</name>
+</wpt>
+<wpt lat="41.890118" lon="-70.27616">
+  <name>July 17, 2026 at 11:11 AM</name>
+</wpt>
+<wpt lat="42.068527" lon="-70.279515">
+  <name>July 17, 2026 at 11:34 AM</name>
+</wpt>
+<wpt lat="42.189042" lon="-70.265414">
+  <name>Whale watching; July 17, 2026 at 11:50 AM</name>
+</wpt>
+<wpt lat="42.06222" lon="-70.261902">
+  <name>July 17, 2026 at 1:15 PM</name>
+</wpt>
+<wpt lat="41.962286" lon="-70.262294">
+  <name>July 17, 2026 at 1:27 PM</name>
+</wpt>
+<wpt lat="41.890248" lon="-70.264717">
+  <name>July 17, 2026 at 1:36 PM</name>
+</wpt>
+<wpt lat="41.779159" lon="-70.272587">
+  <name>July 17, 2026 at 1:49 PM</name>
+</wpt>
+<wpt lat="41.721293" lon="-70.275824">
+  <name>July 17, 2026 at 1:59 PM</name>
+</wpt>
+<wpt lat="41.652297" lon="-70.284147">
+  <name>John F. Kennedy Hyannis Museum</name>
+</wpt>
+<wpt lat="41.648221" lon="-70.291347">
+  <name>Road House Cafe</name>
 </wpt>
 </gpx>
