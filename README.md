@@ -9,5 +9,5 @@ result of our most recent adventure.
 Below are some maps from previous adventures
 
 * [Canadian Maritimes 2025](Maritimes2025/)
-* [Costa Rica 2025](CostRica2025/)
+* [Costa Rica 2025](CostaRica2025/)
 * [Utah 2024](RoadScholarUtah/)
